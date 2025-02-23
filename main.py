@@ -55,8 +55,6 @@ def translate_to_fon(driver, text: str, timeout: int = 10) -> str:
             EC.presence_of_element_located((By.CLASS_NAME, "HwtZe"))
         )
 
-        time.sleep(1)
-
         return new_translation.text  # Renvoyer la traduction
 
     except Exception as e:
