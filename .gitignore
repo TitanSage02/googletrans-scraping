@@ -2,3 +2,5 @@
 /geckodriver
 /data
 geckodriver.log
+/dataset
+*input.csv
