@@ -14,8 +14,8 @@ import logging
 # Configuration
 SOURCE = "fr"
 TARGET = "fon"
-INPUT_CSV = "input.csv"
-OUTPUT_CSV = "output.csv"
+INPUT_CSV = "valid_input.csv"
+OUTPUT_CSV = "valid_output.csv"
 MAX_RETRIES = 3
 SLEEP_RANGE = (1, 3)  # Secondes entre les requêtes
 
@@ -113,6 +113,7 @@ def process_csv():
     
     finally:
         driver.quit()
+        
         # Sauvegarder les résultats
         df.to_csv(OUTPUT_CSV, index=False)
         logger.info(f"Fichier sauvegardé : {OUTPUT_CSV}")
@@ -121,6 +122,7 @@ def process_csv():
 
 if __name__ == '__main__':
     process_csv()
+
     # driver = setup_driver()
 
     # try:
